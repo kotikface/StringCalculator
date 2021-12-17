@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public interface ReadString {
-    static char readOperator(String str) throws Exception {
+    public static char readOperator(String str) throws Exception {
         char[] arr=str.toCharArray();
         int kol=0;
         for (int i = 0; i <arr.length ; i++) {
@@ -20,7 +20,7 @@ public interface ReadString {
 
         return 'f';
     }
-    static String arabicToRoman(int number) {
+    public static String arabicToRoman(int number) {
         if ((number <= 0) || (number > 100)) {
             throw new IllegalArgumentException(number + "не находится в диапазоне (0,100]");
         }
@@ -51,7 +51,7 @@ public interface ReadString {
 
         return sb.toString();
     }
-    static int romanToNumber(String roman) {
+    public static int romanToNumber(String roman) {
         if (roman.equals("I")) {
             return 1;
         } else if (roman.equals("II")) {
